@@ -2977,6 +2977,7 @@ void virDomainDefFree(virDomainDefPtr def)
     virDomainLoaderDefFree(def->os.loader);
     VIR_FREE(def->os.bootloader);
     VIR_FREE(def->os.bootloaderArgs);
+    VIR_FREE(def->os.bootloaderGrubRoot);
 
     virDomainClockDefClear(&def->clock);
 
