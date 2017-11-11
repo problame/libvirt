@@ -1174,12 +1174,17 @@
           </choice>
         </element>
       </optional>
-      <optional>
+       <optional>
         <element name="bootloader_args">
           <text/>
         </element>
       </optional>
-    </interleave>
+      <optional>
+        <element name="bootloader_grub_root">
+          <text/>
+        </element>
+      </optional>
+   </interleave>
   </define>
   <define name="osbootkernel">
     <interleave>
