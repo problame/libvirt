@@ -25902,7 +25902,10 @@ virDomainDefFormatInternal(virDomainDefPtr def,
         virBufferEscapeString(buf,
                               "<bootloader_args>%s</bootloader_args>\n",
                               def->os.bootloaderArgs);
-    }
+        virBufferEscapeString(buf,
+                              "<bootloader_grub_root>%s</bootloader_grub_root>\n",
+                              def->os.bootloaderGrubRoot);
+}
 
     virBufferAddLit(buf, "<os>\n");
     virBufferAdjustIndent(buf, 2);
